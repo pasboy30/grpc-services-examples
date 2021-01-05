@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package primes;
+
+message PrimeRequest {
+    int32 inputInt = 1;
+}
+
+message PrimeResponse {
+    int32 responseInt = 2;
+}
+
+service PrimeDecomposition {
+    // Streaming Server Service
+    rpc primes (PrimeRequest) returns (stream PrimeResponse) {};
+}

@@ -1,0 +1,1 @@
+protoc --proto_path='.' '.\protos\maxima.proto' --js_out=import_style=commonjs,binary:'.\server' --grpc_out='.\server' --plugin=protoc-gen-grpc="C:\Users\Parth Shukla\AppData\Roaming\npm\node_modules\grpc-tools\bin\grpc_node_plugin.exe"

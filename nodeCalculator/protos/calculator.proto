@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+package calculator;
+
+
+service CalculatorService {
+    //unary Services for Calculator
+    rpc Sum (SumRequest) returns (SumResponse) {};
+    rpc Sub (SubRequest) returns (SubResponse) {};
+    rpc Prod (ProdRequest) returns (ProdResponse) {};
+    // This Unary RPC will throw error if the sent number is negative!
+    rpc SquareRoot(SquareRootRequest) returns (SquareRootResponse) {}; // Contains Error Handleing Example
+}
+
+message SquareRootRequest {
+    int32 number = 1;
+}
+
+message SquareRootResponse {
+    double number_root = 1;
+}
+
+message NumberInput {
+    int32 num_1 = 1;
+    int32 num_2 = 2;
+}
+
+message SumRequest {
+    NumberInput sum_input = 1;
+}
+
+message SumResponse {
+    int32 output = 1;
+}
+
+message SubRequest {
+    NumberInput sub_input = 1;
+}
+
+message SubResponse {
+    int32 output = 1;
+}
+
+message ProdRequest {
+    NumberInput prod_input = 1;
+}
+
+message ProdResponse {
+    int32 output = 1;
+}

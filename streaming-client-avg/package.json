@@ -1,0 +1,18 @@
+{
+  "name": "streaming-client-avg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Parth Shukla",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.2.2",
+    "google-protobuf": "^3.14.0",
+    "grpc-tools": "^1.10.0",
+    "node-pre-gyp": "^0.15.0",
+    "nodemon": "^2.0.6"
+  }
+}

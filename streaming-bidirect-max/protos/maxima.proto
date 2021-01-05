@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package maxima;
+
+service MaximumService {
+    rpc GetMaximum (stream MaximumRequest) returns (stream MaximumResponse) {};
+}
+
+message MaximumRequest {
+    int32 input_num = 1;
+}
+
+message MaximumResponse {
+    int32 result = 1;
+}
