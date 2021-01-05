@@ -1,0 +1,1 @@
+protoc --proto_path='.' '.\protos\average.proto' --js_out=import_style=commonjs,binary:'.\server' --grpc_out='.\server' --plugin=protoc-gen-grpc=YOUR_PATH_TO_PROTO_PLUGIN
